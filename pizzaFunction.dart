@@ -22,11 +22,6 @@
 // This function should take the order as an argument, and return the total.
 
 void main() {
-  const pizzaPrices = {
-    'margherita': 5.5,
-    'pepperoni': 7.5,
-    'vegetarian': 6.5,
-  };
   const pizzaPrice = {
     'margherita': 5.5,
     'pepperoni': 7.5,
@@ -35,12 +30,15 @@ void main() {
 
   const order1 = ['margherita', 'pepperoni', 'pineapple'];
   const order2 = ['vegetarian', 'margherita'];
+  const order3 = ['margherita', 'pepporoni'];
 
-  final total1 = calculateTotal(pizzaPrices, order1);
-  final total2 = calculateTotal(pizzaPrices, order2);
+  final total1 = calculateTotal(pizzaPrice, order1);
+  final total2 = calculateTotal(pizzaPrice, order2);
+  final total3 = calculateTotal(pizzaPrice, order3);
 
   print('Total for order 1: \$$total1');
   print('Total for order 2: \$$total2');
+  print('Total for order 3: \$$total3');
 }
 
 double calculate(Map<String, double> pp, List<String> order) {
